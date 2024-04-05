@@ -18,7 +18,7 @@ import ContactUs from "./Components/ContactUs";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="TechHub-connect">
       <Routes>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/" element={<Navigate to="/login" />}></Route>
