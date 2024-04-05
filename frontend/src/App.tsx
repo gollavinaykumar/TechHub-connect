@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./Components/Login";
 import HomePage from "./HomePage";
 import SignUp from "./Components/SignUp";
@@ -18,7 +18,7 @@ import ContactUs from "./Components/ContactUs";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/" element={<Navigate to="/login" />}></Route>
@@ -35,7 +35,7 @@ function App() {
         <Route path="/t&c" element={<Terms />}></Route>
         <Route path="/contactus" element={<ContactUs />}></Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
