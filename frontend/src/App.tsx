@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./Components/Login";
 import HomePage from "./HomePage";
 import SignUp from "./Components/SignUp";
@@ -16,10 +16,9 @@ import UserProfile from "./Components/UserProfile";
 import Terms from "./Components/TermsConditions";
 import ContactUs from "./Components/ContactUs";
 
-
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/" element={<Navigate to="/login" />}></Route>
@@ -36,7 +35,7 @@ function App() {
         <Route path="/t&c" element={<Terms />}></Route>
         <Route path="/contactus" element={<ContactUs />}></Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
