@@ -33,7 +33,7 @@ export default function Course() {
 
   const params: any = useParams();
   useEffect(() => {
-       window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
     fetchData();
   }, []);
   const fetchData = async () => {
@@ -86,7 +86,6 @@ function CoursePage({ course, createQuestionNow }: any) {
         sx={{
           margin: 2,
           display: "flex",
-          justifyContent: "space-evenly",
           gap: 5,
         }}
       >
@@ -97,7 +96,9 @@ function CoursePage({ course, createQuestionNow }: any) {
             alt="no-image"
           />
           <Typography variant="h2">{course.subTitile}</Typography>
-          <Typography component="p">{course.content}</Typography>
+          <pre style={{ width: 800, textAlign: "justify", overflow: "auto" }}>
+            {course.content}
+          </pre>
           <Divider sx={{ margin: 4 }} />
         </Box>
 
@@ -110,7 +111,7 @@ function CoursePage({ course, createQuestionNow }: any) {
                 id="standard-basic"
                 label="Standard"
                 variant="standard"
-                style={{ width: 300 }}
+                style={{ width: 500 }}
                 value={text}
                 onChange={(e) => {
                   SetText(e.target.value);

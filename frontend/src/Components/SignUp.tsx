@@ -47,6 +47,7 @@ export default function SignUpForm() {
       name: data.get("Name"),
       mobile: data.get("number"),
     };
+
     if (user.password === password) {
       try {
         const response = await fetch("http://localhost:8080/signup", {
@@ -62,7 +63,7 @@ export default function SignUpForm() {
         }
         message.success("Signup Successfully");
       } catch (err) {
-        message.error("failed to create user");
+        message.error("Email already exists");
         console.error("Error:", err);
       }
     }

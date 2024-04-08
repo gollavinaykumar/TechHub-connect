@@ -26,9 +26,17 @@ export default function ListCourses() {
   return (
     <Box>
       <Header />
-      {listCourses.map((course: any) => {
-        return <CoursesLists key={course.id} course={course} params={params} />;
-      })}
+      {listCourses.length >= 1 ? (
+        listCourses.map((course: any) => {
+          return (
+            <CoursesLists key={course.id} course={course} params={params} />
+          );
+        })
+      ) : (
+        <h1 style={{ marginTop: 200, marginLeft: 500 }}>
+          No Events in this page
+        </h1>
+      )}
     </Box>
   );
 }

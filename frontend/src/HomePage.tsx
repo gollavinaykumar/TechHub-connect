@@ -186,9 +186,8 @@ export const LISTS = [
     text: "Crowdfunding",
   },
   {
-    image:
-      "https://www.applify.com.sg/blog/wp-content/uploads/2022/03/A-pathway-that-UIUX-team-follows-before-designing-your-app.png",
-    text: "UX/UI Designers",
+    image: "https://sebringohio.net/wp-content/uploads/2022/08/Job_Posting.png",
+    text: "Job postings",
   },
   {
     image:
